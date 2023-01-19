@@ -1,0 +1,22 @@
+package desafiosUdemy;
+
+public class Pessoa {
+
+	String nome;
+	double pesoPessoa;
+	
+	public Pessoa(String nome, double peso) {
+
+		this.nome = nome;
+		this.pesoPessoa =peso;
+	}
+
+	void comer(Comida comida) {
+
+		if (comida != null) {
+
+			pesoPessoa += comida.pesoComida;
+		}
+	}
+
+}

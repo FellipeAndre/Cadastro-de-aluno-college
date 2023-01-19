@@ -1,0 +1,29 @@
+package desafiosUdemy;
+
+public class PrimeiroTrauma {
+
+	/* 
+	 * Nessa classe realizandoum desafio referente a um tipo de atributo da classe 
+	 * conhecido como membro da classe.
+	 * 
+	 * Objetivo foi realizar o atributo a iniciado como primitivo compilar dentro do método main
+	 * 
+	 *  SOLUÇÃO1: conformo aprendido no curso transformei o atributo com static se tornando um 
+	 *  atributo da classe com isso posso utiliza-lo demaneira global enão havendo erro de compilação
+	 *  e deixando esse atributo como Constante não podendo ser alterado.
+	 *  
+	 *  SOLUÇÃO2: utilizei o atributo como Instancia para apresentar o valor compilado.
+	 *  
+	 */
+	final static int A = 3;
+	int b = 4;
+	
+	public static void main(String[] args) {
+		
+		System.out.println(A);
+		
+		PrimeiroTrauma p = new PrimeiroTrauma();
+		
+		System.out.println(p.b);
+	}
+}

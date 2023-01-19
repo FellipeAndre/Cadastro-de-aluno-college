@@ -1,0 +1,19 @@
+package desafiosUdemy;
+
+public class Jantar {
+
+	public static void main(String[] args) {
+		
+		Pessoa p1 = new Pessoa();
+		p1.nome = "Felipe Tobias";	
+		p1.pesoPessoa = 146.67;
+		
+		Comida c1 = new Comida("arroz", 0145);
+		
+		p1.comer(c1);
+		
+		System.out.println(p1.comer(c1));
+		
+		
+	}
+}

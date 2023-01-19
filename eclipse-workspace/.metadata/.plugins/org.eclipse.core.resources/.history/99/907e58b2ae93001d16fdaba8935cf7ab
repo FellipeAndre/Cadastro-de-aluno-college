@@ -1,0 +1,11 @@
+package br.com.alunocadastrados.collegio;
+
+public class DadosPesssoais {
+	
+	String cpf;
+	Integer rg;
+	Pessoa certidaoDeNascimenmto;
+	Boolean carteiraDeVacina;
+	
+
+}

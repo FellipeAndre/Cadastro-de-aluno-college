@@ -1,0 +1,8 @@
+package br.com.alunocadastrados.collegio;
+
+public class Filhos {
+	
+	private Pessoa informacaoFilho;
+	private DadosPessoais dadosFilhos;
+	
+}

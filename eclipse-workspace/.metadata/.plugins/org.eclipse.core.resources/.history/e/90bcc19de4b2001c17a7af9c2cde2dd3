@@ -1,0 +1,15 @@
+
+public class String {
+
+	public static void main(java.lang.String[] args) {
+		
+		String s = "Bom Dia Felipe";
+		
+		int numero =123;
+		
+		s.toString();
+		
+
+	}
+
+}

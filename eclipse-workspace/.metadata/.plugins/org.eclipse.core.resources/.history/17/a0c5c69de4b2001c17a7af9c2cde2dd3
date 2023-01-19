@@ -1,0 +1,12 @@
+
+public class String {
+
+	public static void main(java.lang.String[] args) {
+		
+		int numero =123;
+		String letra = new String;
+		
+
+	}
+
+}

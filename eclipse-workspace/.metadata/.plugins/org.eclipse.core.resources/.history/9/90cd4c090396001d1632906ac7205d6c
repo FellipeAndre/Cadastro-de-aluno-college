@@ -1,0 +1,19 @@
+package br.com.alunocadastrados.collegio;
+
+import java.util.Scanner;
+
+public class TestEntradaDeDados {
+
+	public static void main(String[] args) {
+
+		
+		Scanner leitor = new Scanner(System.in);
+		
+		CadastraAluno cd = new CadastraAluno();
+		
+		cd.cadastroDeEspera(leitor);
+		
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class Frases {
+
+	public static void main(String[] args) {
+		
+		String nome = "Bom Dia Felipe";
+		
+		String resolucao;
+		
+		resolucao = nome.toLowerCase();
+		
+		System.out.println(resolucao.toString());
+		
+		resolucao =nome.toUpperCase();
+		System.out.println(resolucao.toString());
+
+	}
+
+}

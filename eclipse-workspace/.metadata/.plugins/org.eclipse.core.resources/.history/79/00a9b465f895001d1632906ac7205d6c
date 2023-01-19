@@ -1,0 +1,12 @@
+package br.com.alunocadastrados.collegio;
+
+public class CadastraAluno {
+	
+	public void cadastroListaDeEspera(Pais responsavelDoAluno) {
+		
+		responsavelDoAluno
+	
+		
+	}
+
+}

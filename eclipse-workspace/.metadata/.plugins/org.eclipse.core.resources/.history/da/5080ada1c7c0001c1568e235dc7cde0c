@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+public class Frases {
+
+	public static void main(String[] args) {
+
+		String nome = "Bom Dia Felipe";
+
+		String resolucao;
+
+		resolucao = nome.toLowerCase();
+
+		System.out.println(resolucao.toString());
+
+		resolucao = nome.toUpperCase();
+		System.out.println(resolucao.toString());
+
+		resolucao = nome.replace(nome, "tudo@bem");
+		System.out.println(resolucao.toString());
+
+		String spli[] = nome.split(" ");
+		spli[0] = "Bom ";
+		spli[1] = "Dia ";
+		spli[2] = "Felipe";
+
+		System.out.println(spli[0]);
+		System.out.println(spli[1]);
+		System.out.println(spli[2]);
+
+		ArrayList<String> lista = new ArrayList<String>();
+		
+		lista.add("Fellipe Jeffersson");
+		lista.add("Bruno Willian");
+		lista.add("Bruno Andre");
+		lista.add("Mae");
+		lista.add("Pai");
+		
+		for(String contato : lista) {
+			
+			contato.toString();
+			System.out.println(contato.toString());
+		}
+		
+	}
+
+}

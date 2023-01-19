@@ -1,0 +1,18 @@
+package desafiosUdemy;
+
+public class Comida {
+
+	String nome;
+	double pesoComida;
+	
+	Comida(){
+		
+	}
+	
+	double pesoAposAlimentacao(Pessoa pesoPessoa) {
+		
+		double resultado = pesoPessoa.pesoPessoa += this.pesoComida;
+		
+		return resultado;
+	}
+}

@@ -1,0 +1,14 @@
+package br.com.alunosmatriculados.collegio;
+
+public class Administracao {
+	Integer senha;
+	String validarAcesso;
+	private Boolean aprovarMatricula = false;
+	private MatriculaDoAluno matricula;
+	
+	public void aprovacaoAdm() {
+		
+		matricula.
+	}
+
+}

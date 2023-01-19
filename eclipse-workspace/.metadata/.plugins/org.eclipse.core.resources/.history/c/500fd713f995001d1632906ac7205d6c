@@ -1,0 +1,12 @@
+package br.com.alunocadastrados.collegio;
+
+public class Endereco {
+	
+	private String cep;
+	private String rua;
+	private String complemeto;
+	private String cidade;
+	private String estado;
+	private String municipio;
+
+}

@@ -1,0 +1,12 @@
+package br.com.alunocadastrados.collegio;
+
+public class DadosParaColegio {
+
+  public String informacaoDeDados(String dados) {
+	  
+	   System.out.println(dados);
+	   
+	   return dados;
+  }
+
+}

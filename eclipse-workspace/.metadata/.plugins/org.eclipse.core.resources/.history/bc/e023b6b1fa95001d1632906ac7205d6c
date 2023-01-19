@@ -1,0 +1,20 @@
+package br.com.alunocadastrados.collegio;
+
+import java.util.Scanner;
+
+public class CadastraAluno {
+	
+	private Pais pais;
+	private Filhos estudante;
+	
+	
+	public void cadastroListaDeEspera(Scanner leitor) {
+		
+		DadosParaColegio dc = new DadosParaColegio();
+		
+		dc.setNomePais(this.pais.setNome(leitor.next()));
+			
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package br.com.alunosmatriculados.collegio;
+
+import java.util.Random;
+
+import br.com.alunocadastrados.collegio.Pais;
+
+public class MatriculaDoAluno {
+	
+	private Random numMatricula;
+	private Pais dadosDeConfirmacao;
+	
+
+}

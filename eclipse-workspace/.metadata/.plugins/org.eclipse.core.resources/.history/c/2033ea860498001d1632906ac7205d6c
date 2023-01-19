@@ -1,0 +1,86 @@
+package br.com.alunocadastrados.collegio;
+
+import java.util.Scanner;
+
+import br.com.alunosmatriculados.collegio.MatriculaDoAluno;
+
+public class CadastraAluno {
+	
+	Scanner leitor;
+	private MatriculaDoAluno matricula;
+	
+	/*
+	 * Construtor Default
+	 * 
+	 */
+	public CadastraAluno() {}
+	
+	public CadastraAluno(Scanner leitor) {
+		
+		this.leitor = leitor;
+	}
+	
+	
+	public void cadastroDeEspera(Pais pais) {
+		
+		try {
+		System.out.println("Nome do Responsável");
+		pais.setNome(leitor.nextLine());
+		System.out.println("Dados do Responsável:");
+		System.out.println("cpf : ");
+		pais.setCpf(leitor.nextLine());
+		System.out.println("Data de Nascimento");
+		pais.setDataNasc(leitor.nextLine());
+		System.out.println("Nacionalidade");
+	    pais.setNacionalidade(leitor.nextLine());
+	    pais.setIdade(leitor.nextInt());
+	    pais.setEstadoCivil(leitor.nextLine());
+	    pais.setProfissao(leitor.nextLine());
+	    pais.setRaca(leitor.nextLine());
+		
+		this.dadosDeMoradia(pais);
+		
+		}catch(NullPointerException ex) {
+			ex.getMessage();
+			}
+		
+		System.out.println(saidaDosDados(pais));
+	}
+	
+	private void dadosDeMoradia(Pais pais) {
+		
+MatriculaDoAluno numDaMatricula = this.matricula.AlunoMatriculados(pais);
+		
+		System.out.println(numDaMatricula);
+		
+		System.out.println("Endereço: ");
+		System.out.println("Rua: ");
+		pais.getEndereco().setRua(leitor.nextLine());
+		System.out.println("Cep");
+		pais.getEndereco().setCep(leitor.nextLine());
+		System.out.println("Cidade: ");
+		pais.getEndereco().setCidade(leitor.nextLine());
+		System.out.println("Municipio: ");
+		pais.getEndereco().setMunicipio(leitor.nextLine());
+		System.out.println("Estado: ");
+		pais.getEndereco().setEstado(leitor.nextLine());
+		leitor.next();
+		
+	}
+
+
+	private Pais saidaDosDados(Pais pais) {
+		
+		pais.getCpf();
+		pais.getDataNasc();
+		pais.getNacionalidade();	
+		pais.getEndereco().getRua();
+		pais.getEndereco().getCep();
+		pais.getEndereco().getCidade();
+		pais.getEndereco().getMunicipio();
+		pais.getEndereco().getEstado();
+		
+		return pais;
+	}
+
+}

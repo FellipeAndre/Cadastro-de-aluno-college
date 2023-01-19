@@ -1,0 +1,80 @@
+package br.com.alunocadastrados.collegio;
+
+import java.util.Scanner;
+
+public class CadastraAluno {
+	
+	Scanner leitor;
+	
+	public CadastraAluno(Scanner leitor) {
+		
+		this.leitor = leitor;
+	}
+	
+	
+	public void cadastroDeEspera(Pais pais) {
+		
+		
+		try {	
+		System.out.println("Nome do Responsável");
+		pais.setNome(leitor.nextLine());
+		System.out.println("Dados do Responsável:");
+		System.out.println("cpf : ");
+		pais.setCpf(leitor.nextLine());
+		System.out.println("Data de Nascimento");
+		pais.setDataNasc(leitor.nextLine());
+		System.out.println("Nacionalidade");
+	    pais.setNacionalidade(leitor.nextLine());	
+		
+		this.DadosDeMoradia(pais);
+		
+		}catch(NullPointerException ex){
+			ex.getMessage();
+		}
+		
+		System.out.println(saidaDosDados(pais));
+	}
+	
+	private void DadosDeMoradia(Pais pais) {
+		
+		Endereco ed = new Endereco();
+		try {
+		System.out.println("Endereço: ");
+	    System.out.println("Rua: ");
+		ed.setRua(leitor.next());
+		System.out.println("Cep");
+		ed.setCep(leitor.nextLine());
+		System.out.println("Cidade: ");
+		ed.setCidade(leitor.nextLine());
+		System.out.println("Municipio: ");
+		ed.setMunicipio(leitor.nextLine());
+		System.out.println("Estado: ");
+		ed.setEstado(leitor.nextLine());
+		leitor.next();
+		}catch(NullPointerException ex) {
+			ex.getMessage();
+		}
+		
+		this.saidaDosDados(pais);
+		
+	}
+
+
+	private Pais saidaDosDados(Pais pais) {
+		
+		
+		
+		
+		pais.getCpf();
+		pais.getDataNasc();
+		pais.getNacionalidade();	
+		pais.endereco.getRua();
+		pais.endereco.getCep();
+		pais.endereco.getCidade();
+		pais.endereco.getMunicipio();
+		pais.endereco.getEstado();
+		
+		return pais;
+	}
+
+}

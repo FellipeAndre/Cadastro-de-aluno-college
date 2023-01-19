@@ -1,0 +1,23 @@
+package br.com.alunocadastrados.collegio;
+
+public class Filhos {
+	
+	private Pessoa informacaoFilho;
+	private DadosPessoais dadosFilhos;
+	
+	
+	
+	public Pessoa getInformacaoFilho() {
+		return informacaoFilho;
+	}
+	public void setInformacaoFilho(Pessoa informacaoFilho) {
+		this.informacaoFilho = informacaoFilho;
+	}
+	public DadosPessoais getDadosFilhos() {
+		return dadosFilhos;
+	}
+	public void setDadosFilhos(DadosPessoais dadosFilhos) {
+		this.dadosFilhos = dadosFilhos;
+	}
+	
+}

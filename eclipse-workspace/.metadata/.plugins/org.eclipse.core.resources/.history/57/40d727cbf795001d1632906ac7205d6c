@@ -1,0 +1,20 @@
+package br.com.alunocadastrados.collegio;
+
+public class Pais {
+
+	private Pessoa identidadeDosPais;
+	private DadosPessoais informacoesDosPais;
+	
+	public Pessoa getIdentidadeDosPais() {
+		return identidadeDosPais;
+	}
+	public void setIdentidadeDosPais(Pessoa identidadeDosPais) {
+		this.identidadeDosPais = identidadeDosPais;
+	}
+	public DadosPessoais getInformacoesDosPais() {
+		return informacoesDosPais;
+	}
+	public void setInformacoesDosPais(DadosPessoais informacoesDosPais) {
+		this.informacoesDosPais = informacoesDosPais;
+	}
+}

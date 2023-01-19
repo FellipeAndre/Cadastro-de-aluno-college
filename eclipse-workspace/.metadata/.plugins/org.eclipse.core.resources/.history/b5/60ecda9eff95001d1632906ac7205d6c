@@ -1,0 +1,52 @@
+package br.com.alunocadastrados.collegio;
+
+import java.util.Scanner;
+
+public class CadastraAluno {
+	
+	private Pais pais;
+	
+	
+	public void cadastroDeEspera(Scanner leitor) {
+		
+		System.out.println("Nome do Responsável");
+		this.pais.setNome(leitor.next());
+		System.out.println("Dados do Responsável:");
+		System.out.println("cpf : ");
+		this.pais.setCpf(leitor.nextLine());
+		System.out.println("Data de Nascimento");
+		this.pais.setDataNasc(leitor.nextLine());
+		System.out.println("Nacionalidade");
+		this.pais.setNacionalidade(leitor.next());	
+		System.out.println("Endereço: ");
+		System.out.println("Rua: ");
+		this.pais.getEndereco().setRua(leitor.nextLine());
+		System.out.println("Cep");
+		this.pais.getEndereco().setCep(leitor.next());
+		System.out.println("Cidade: ");
+		this.pais.getEndereco().setCidade(leitor.nextLine());
+		System.out.println("Municipio: ");
+		this.pais.getEndereco().setMunicipio(leitor.nextLine());
+		System.out.println("Estado: ");
+		this.pais.getEndereco().setEstado(leitor.nextLine());
+		
+	}
+	
+	public Pais saidaDosDados() {
+		
+		
+		
+		this.pais.getNome();
+		this.pais.getCpf();
+		this.pais.getDataNasc();
+		this.pais.getNacionalidade();	
+		this.pais.getEndereco().getRua();
+		this.pais.getEndereco().getCep();
+		this.pais.getEndereco().getCidade();
+		this.pais.getEndereco().getMunicipio();
+		this.pais.getEndereco().getEstado();
+		
+		return this.pais;
+	}
+
+}

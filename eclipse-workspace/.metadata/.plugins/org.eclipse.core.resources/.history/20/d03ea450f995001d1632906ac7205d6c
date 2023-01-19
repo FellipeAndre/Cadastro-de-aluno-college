@@ -1,0 +1,22 @@
+package br.com.alunocadastrados.collegio;
+
+public class Filhos extends Pessoa{
+	
+	private Pais dadosDoResponsavel;
+	private String rg;
+	
+	
+	public Pais getDadosDoResponsavel() {
+		return dadosDoResponsavel;
+	}
+	public void setDadosDoResponsavel(Pais dadosDoResponsavel) {
+		this.dadosDoResponsavel = dadosDoResponsavel;
+	}
+	public String getRg() {
+		return rg;
+	}
+	public void setRg(String rg) {
+		this.rg = rg;
+	}	
+	
+}
