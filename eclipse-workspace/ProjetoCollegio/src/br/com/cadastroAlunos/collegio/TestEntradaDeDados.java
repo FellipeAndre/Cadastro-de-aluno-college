@@ -2,7 +2,7 @@ package br.com.cadastroAlunos.collegio;
 
 import java.util.Scanner;
 
-import br.com.aluno.collegio.Pais;
+import br.com.aluno.collegio.Responsavel;
 
 public class TestEntradaDeDados {
 
@@ -11,7 +11,7 @@ public class TestEntradaDeDados {
 		
 		Scanner leitor = new Scanner(System.in);
 		CadastraAluno cd = new CadastraAluno(leitor);
-		Pais p = new Pais();
+		Responsavel p = new Responsavel();
 		cd.cadastrarAluno(p);
 		
 	}
