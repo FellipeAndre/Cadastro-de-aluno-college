@@ -1,10 +1,5 @@
 package br.com.aluno.collegio.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-@Entity
-@Table
 public class Endereco {
 	
 	

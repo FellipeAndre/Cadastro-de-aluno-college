@@ -1,23 +1,41 @@
 package br.com.aluno.collegio.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.time.LocalDate;
 
-@Entity
-@Table
-public class Aluno extends Pessoa{
+
+public class Aluno {
 	
 	private String nome;
 	private String rg;
+	private String cpf;
 	private Integer idade;
-	private Long matricula;
+	private String raca;
+	private String nacionalidade;
+	private LocalDate dataNasc;
 	
-	public Long getMatricula() {
-		return matricula;
+	
+	public String getRaca() {
+		return raca;
 	}
 
-	public void setMatricula(Long matricula) {
-		this.matricula = matricula;
+	public void setRaca(String raca) {
+		this.raca = raca;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+
+	public LocalDate getDataNasc() {
+		return dataNasc;
+	}
+
+	public void setDataNasc(LocalDate dataNasc) {
+		this.dataNasc = dataNasc;
 	}
 
 	public Integer getIdade() {
@@ -42,6 +60,15 @@ public class Aluno extends Pessoa{
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
 	
 	@Override
 	public String toString() {
