@@ -1,14 +1,23 @@
 package br.com.cadastroEnsinoFundamental1.collegio;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
-import br.com.aluno.collegio.Responsavel;
+import br.com.aluno.collegio.entity.Responsavel;
+import br.com.cadastroAlunos.collegio.SaidaDeDados;
+import br.com.cadastroAlunos.collegio.Secretaria;
+import br.com.cadastroAlunos.csv.GerarCsvAlunos;
 
 public class CadastrarAlunoEnsinoFundamental_I{
 	
 	Scanner leitor = new Scanner(System.in);
-	
+	private static List<Responsavel> responsavelDoalunos = new ArrayList<>();
+	private Secretaria gerarMatricula = new Secretaria();
+	private GerarCsvAlunos csv = new GerarCsvAlunos();	
 	public CadastrarAlunoEnsinoFundamental_I() {
 	}
 	
@@ -18,18 +27,48 @@ public class CadastrarAlunoEnsinoFundamental_I{
 	}
 	
 	
-	public void cadastrarAlunoEnsinoFundamental_I(Responsavel dadosresponsável) {
+	public void cadastrarAlunoEnsinoFundamental_I(Responsavel dadosresponsavel) {
 		
-		if(Objects.nonNull(dadosresponsável.getDadosDoAluno().getDataNasc()) &&
-		Objects.nonNull(dadosresponsável.getDadosDoAluno().getIdade())) {
+		if(Objects.nonNull(dadosresponsavel.getDadosDoAluno().getDataNasc()) &&
+		Objects.nonNull(dadosresponsavel.getDadosDoAluno().getIdade())) {
 		
 		System.out.println("Digite seu nome completo: ");
-		dadosresponsável.getDadosDoAluno().setNome(leitor.nextLine());
+		dadosresponsavel.getDadosDoAluno().setNome(leitor.nextLine());
 		System.out.println("Digite seu RG: ");
-		dadosresponsável.getDadosDoAluno().setRg(leitor.nextLine());
+		dadosresponsavel.getDadosDoAluno().setRg(leitor.nextLine());
 		
 		}
 		
+		csv.gerarCsvAluno(this.lista(dadosresponsavel));
+		
+		this.SaidaDados(getResponsavelDoalunos(), gerarMatricula.gerarMatriculaDoAluno(dadosresponsavel));
+		
+	}
+	
+	private void SaidaDados(List<Responsavel> responsavelDoalunos, Random gerarMatriculaDoAluno) {
+        
+		for (Responsavel responsavel : responsavelDoalunos) {
+			
+			System.out.println(responsavel);
+		}
+		System.out.println(gerarMatriculaDoAluno.nextInt());
 	}
 
+	List<Responsavel> lista(Responsavel dadosresponsavel ){
+		
+		CadastrarAlunoEnsinoFundamental_I.responsavelDoalunos.add(dadosresponsavel);
+		
+		if(CadastrarAlunoEnsinoFundamental_I.responsavelDoalunos.isEmpty()) {
+			
+			System.out.println("Lista Vazia");
+		}
+		
+		return this.getResponsavelDoalunos();
+	}
+
+	public List<Responsavel> getResponsavelDoalunos() {
+		return CadastrarAlunoEnsinoFundamental_I.responsavelDoalunos;
+	}
+
+	
 }

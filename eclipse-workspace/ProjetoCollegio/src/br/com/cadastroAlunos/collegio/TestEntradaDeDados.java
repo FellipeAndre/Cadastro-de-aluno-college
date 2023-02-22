@@ -2,7 +2,7 @@ package br.com.cadastroAlunos.collegio;
 
 import java.util.Scanner;
 
-import br.com.aluno.collegio.Responsavel;
+import br.com.aluno.collegio.entity.Responsavel;
 
 public class TestEntradaDeDados {
 
@@ -14,6 +14,7 @@ public class TestEntradaDeDados {
 		Responsavel p = new Responsavel();
 		cd.cadastrarAluno(p);
 		
+		leitor.close();
 	}
 
 }

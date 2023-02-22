@@ -3,13 +3,13 @@ package br.com.cadastroAlunos.collegio;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-import br.com.aluno.collegio.Responsavel;
+import br.com.aluno.collegio.entity.Responsavel;
 import br.com.cadastroEnsinoFundamental1.collegio.CadastrarAlunoEnsinoFundamental_I;
 import br.com.cadastroEnsinoFundametal2.collegio.CadastrarAlunoEnsinoFundamental_II;
 import br.com.cadastroEnsinoMedio.collegio.CadastrarAlunoEnsinoMedio;
 import br.com.cadastroSuperior.collegio.CadastrarAlunoEnsinoSuperior;
 
-public class CadastraAluno implements StatusDeCadastrarAlunos {
+public class CadastraAluno  {
 
 	Scanner leitor = new Scanner(System.in);
 	
@@ -31,43 +31,43 @@ public class CadastraAluno implements StatusDeCadastrarAlunos {
 		this.leitor = leitor;
 	}
 
-	public  void cadastrarAluno(Responsavel dadosresponsável) {
+	public  void cadastrarAluno(Responsavel dadosresponsavel) {
 
-		System.out.println("Nome completo do responsável: ");
-		dadosresponsável.setNome(leitor.nextLine());
+		System.out.println("Nome completo do responsï¿½vel: ");
+		dadosresponsavel.setNome(leitor.nextLine());
 
-		if (dadosresponsável.getDadosDoAluno().getDataNasc() == null) {
+		if (dadosresponsavel.getDadosDoAluno().getDataNasc() == null) {
 			
 			System.out.println("informar data de Nascimento do Filho  yyyy/mm/dd: ");
-			dadosresponsável.getDadosDoAluno()
+			dadosresponsavel.getDadosDoAluno()
 					.setDataNasc(LocalDate.of(leitor.nextInt(), leitor.nextInt(), leitor.nextInt()));
 		}
 		
-		dadosresponsável.getDadosDoAluno()
-				.setIdade(this.idadeDoAluno(dadosresponsável.getDadosDoAluno().getDataNasc()));
+		dadosresponsavel.getDadosDoAluno()
+				.setIdade(this.idadeDoAluno(dadosresponsavel.getDadosDoAluno().getDataNasc()));
 
-		if (dadosresponsável.getDadosDoAluno().getIdade() > 18) {
+		if (dadosresponsavel.getDadosDoAluno().getIdade() > 18) {
 
-			this.ensinoSuperior.cadastrarAluno(dadosresponsável);
+			this.ensinoSuperior.cadastrarAluno(dadosresponsavel);
 
-		} else if (dadosresponsável.getDadosDoAluno().getIdade() > 15
-				&& dadosresponsável.getDadosDoAluno().getIdade() < 18) {
+		} else if (dadosresponsavel.getDadosDoAluno().getIdade() > 15
+				&& dadosresponsavel.getDadosDoAluno().getIdade() < 18) {
 
-			this.ensinoMedio.cadastrarAluno(dadosresponsável);
+			this.ensinoMedio.cadastrarAluno(dadosresponsavel);
 
-		} else if (dadosresponsável.getDadosDoAluno().getIdade() > 10
-				&& dadosresponsável.getDadosDoAluno().getIdade() < 15) {
+		} else if (dadosresponsavel.getDadosDoAluno().getIdade() > 10
+				&& dadosresponsavel.getDadosDoAluno().getIdade() < 15) {
 
-			this.ensinoFundamental_II.cadastrarAluno(dadosresponsável);
+			this.ensinoFundamental_II.cadastrarAluno(dadosresponsavel);
 
 		}else {
 
-			this.ensinoFundamental_I.cadastrarAlunoEnsinoFundamental_I(dadosresponsável);
+			this.ensinoFundamental_I.cadastrarAlunoEnsinoFundamental_I(dadosresponsavel);
 		}
 	}
 
 	/*
-	 * método reponsável por retornar a idade do Aluno para validar o Ensino
+	 * mï¿½todo reponsï¿½vel por retornar a idade do Aluno para validar o Ensino
 	 * 
 	 */
 	private Integer idadeDoAluno(LocalDate dataDeNasciemnto) {

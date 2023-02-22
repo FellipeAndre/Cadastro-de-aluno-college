@@ -1,12 +1,11 @@
 package br.com.cadastroEnsinoMedio.collegio;
 
-import br.com.aluno.collegio.Responsavel;
-import br.com.cadastroAlunos.collegio.StatusDeCadastrarAlunos;
+import br.com.aluno.collegio.entity.Responsavel;
 
-public class CadastrarAlunoEnsinoMedio implements StatusDeCadastrarAlunos{
+public class CadastrarAlunoEnsinoMedio {
 
-	@Override
-	public void cadastrarAluno(Responsavel dadosresponsável) {
+	
+	public void cadastrarAluno(Responsavel dadosresponsavel) {
 		// TODO Auto-generated method stub
 		
 	}
